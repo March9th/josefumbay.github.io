@@ -442,8 +442,8 @@ h6 {
   margin: auto;
 }
 
-.gallery-images img{
-  cursor: pointer;
+.gallery-images div img{
+  cursor: pointer !important;
 }
 
 
