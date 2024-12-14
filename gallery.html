@@ -73,40 +73,56 @@
       <div class="row">
         <!-- Column 1 -->
         <div class="col-md-3 mb-4">
-          <img src="assets/img/valorant1.jpg" class="img-fluid rounded" alt="Image 1">
+          <img src="assets/img/valorant1.jpg" class="img-fluid rounded" alt="Image 1" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
         </div>
         <!-- Column 2 -->
         <div class="col-md-3 mb-4">
-          <img src="assets/img/valorant2.jpg" class="img-fluid rounded" alt="Image 2">
+          <img src="assets/img/valorant2.jpg" class="img-fluid rounded" alt="Image 2" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
         </div>
         <!-- Column 3 -->
         <div class="col-md-3 mb-4">
-          <img src="assets/img/valorant3.jpg" class="img-fluid rounded" alt="Image 3">
+          <img src="assets/img/valorant3.jpg" class="img-fluid rounded" alt="Image 3" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
         </div>
         <!-- Column 4 -->
         <div class="col-md-3 mb-4">
-          <img src="assets/img/valorant4.jpg" class="img-fluid rounded" alt="Image 4">
+          <img src="assets/img/valorant4.jpg" class="img-fluid rounded" alt="Image 4" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
         </div>
       </div>
       <div class="row">
         <!-- Column 1 -->
         <div class="col-md-3 mb-4">
-          <img src="assets/img/valorant5.jpg" class="img-fluid rounded" alt="Image 1">
+          <img src="assets/img/valorant5.jpg" class="img-fluid rounded" alt="Image 5" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
         </div>
         <!-- Column 2 -->
         <div class="col-md-3 mb-4">
-          <img src="assets/img/valorant6.jpg" class="img-fluid rounded" alt="Image 2">
+          <img src="assets/img/valorant6.jpg" class="img-fluid rounded" alt="Image 6" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
         </div>
         <!-- Column 3 -->
         <div class="col-md-3 mb-4">
-          <img src="assets/img/valorant7.jpg" class="img-fluid rounded" alt="Image 3">
+          <img src="assets/img/valorant7.jpg" class="img-fluid rounded" alt="Image 7" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
         </div>
         <!-- Column 4 -->
         <div class="col-md-3 mb-4">
-          <img src="assets/img/valorant8.jpg" class="img-fluid rounded" alt="Image 4">
+          <img src="assets/img/valorant8.jpg" class="img-fluid rounded" alt="Image 8" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
         </div>
       </div>
     </section>
+  
+    <!-- Modal -->
+    <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="imageModalLabel">Image Preview</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body text-center">
+            <img id="modalImage" src="" class="img-fluid rounded" alt="Magnified Image">
+          </div>
+        </div>
+      </div>
+    </div>
+  
   </main>
 
   <footer id="footer" class="footer dark-background">
@@ -133,7 +149,13 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
-
+  <script>
+    function showImage(imgElement) {
+      const modalImage = document.getElementById('modalImage');
+      modalImage.src = imgElement.src;
+      modalImage.alt = imgElement.alt;
+    }
+  </script>
 </body>
 
 </html>
