@@ -1,13 +1,6 @@
 (function() {
   "use strict";
 
-/** Image Magnifier */
-  function showImage(imgElement) {
-    const modalImage = document.getElementById('modalImage');
-    modalImage.src = imgElement.src;
-    modalImage.alt = imgElement.alt;
-  }
-
   /**
    * Apply .scrolled class to the body as the page is scrolled down
    */
