@@ -437,7 +437,7 @@ h6 {
   object-fit: contain;
 }
 
-.modal-dialog {
+#loginModal .modal-dialog {
   max-width: 1024px !important;
   margin: auto;
 }
